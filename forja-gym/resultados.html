@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tus resultados y rutina — Forja Gym</title>
+  <meta name="description" content="Mira tus respuestas y la rutina de gimnasio semanal creada para ti.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor">
+      <a href="index.html" class="logo"><span class="icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"/></svg></span>FORJA GYM</a>
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="preguntas.html">Cuestionario</a>
+        <a href="resultados.html" class="activo">Resultados</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div id="sin-resultados" class="contenedor vacio oculto">
+      <h1>Aún no hay resultados</h1>
+      <p>Responde el cuestionario para ver tus resultados y tu rutina personalizada.</p>
+      <a class="boton" href="preguntas.html">Ir al cuestionario →</a>
+    </div>
+
+    <div id="con-resultados" class="contenedor pagina oculto">
+      <p class="etiqueta">Paso 2 de 2</p>
+      <h1>Tus resultados</h1>
+
+      <section style="margin-top:40px">
+        <h2 style="font-size:36px">Tus respuestas</h2>
+        <dl id="mis-respuestas" class="respuestas"></dl>
+      </section>
+
+      <section style="margin-top:64px">
+        <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end">
+          <div>
+            <h2 style="font-size:60px">Tu <span class="verde">rutina</span></h2>
+            <p id="titulo-rutina" class="suave"></p>
+          </div>
+          <a class="boton linea chico" href="preguntas.html">↺ Cambiar respuestas</a>
+        </div>
+
+        <div class="info">
+          <div><strong>⏱ Descanso</strong><span id="descanso"></span></div>
+          <div><strong>💡 Consejo</strong><span id="consejo"></span></div>
+        </div>
+
+        <p class="suave" style="margin-top:24px;font-size:15px">
+          Antes de cada sesión calienta 5–10 minutos (caminar rápido o movilidad).
+          Lee “series × reps” así: <strong style="color:var(--texto)">4 × 8–12</strong> = haz 4 series de entre 8 y 12 repeticiones.
+        </p>
+
+        <div id="dias"></div>
+      </section>
+    </div>
+  </main>
+  <footer class="pie">
+    <div class="franja"></div>
+    <div class="contenedor"><span class="marca">FORJA GYM</span><span>Entrena con un plan. Sin excusas.</span></div>
+  </footer>
+  <script src="app.js"></script>
+  <script>iniciarResultados();</script>
+</body>
+</html>

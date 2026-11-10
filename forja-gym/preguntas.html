@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario — Forja Gym</title>
+  <meta name="description" content="Responde preguntas de selección múltiple y agrega las tuyas para armar tu rutina.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor">
+      <a href="index.html" class="logo"><span class="icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"/></svg></span>FORJA GYM</a>
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="preguntas.html" class="activo">Cuestionario</a>
+        <a href="resultados.html">Resultados</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="contenedor pagina">
+      <p class="etiqueta">Paso 1 de 2</p>
+      <h1>Cuestionario</h1>
+      <p class="suave">Elige una opción en cada pregunta. Las 4 principales arman tu rutina. Abajo puedes agregar tus propias preguntas de selección múltiple.</p>
+
+      <form id="cuestionario">
+        <div id="lista-preguntas"></div>
+        <p id="aviso" class="aviso"></p>
+        <button type="submit" class="boton">Ver mis resultados →</button>
+      </form>
+
+      <form id="nueva-pregunta" class="agregar">
+        <h2>Agregar <span class="verde">pregunta</span></h2>
+        <label for="texto-pregunta">Pregunta</label>
+        <input id="texto-pregunta" class="campo" placeholder="Ej: ¿Tienes alguna lesión?" maxlength="120">
+        <label>Opciones (de 2 a 6)</label>
+        <div id="opciones-nuevas"></div>
+        <div class="acciones">
+          <button type="button" id="mas-opcion" class="boton linea chico">+ Opción</button>
+          <button type="submit" class="boton chico">Guardar pregunta</button>
+        </div>
+        <p id="aviso-nueva" class="aviso"></p>
+      </form>
+    </div>
+  </main>
+  <footer class="pie">
+    <div class="franja"></div>
+    <div class="contenedor"><span class="marca">FORJA GYM</span><span>Entrena con un plan. Sin excusas.</span></div>
+  </footer>
+  <script src="app.js"></script>
+  <script>iniciarCuestionario();</script>
+</body>
+</html>
